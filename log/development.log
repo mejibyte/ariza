@@ -1,0 +1,156 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (8.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnswers (20091109031457)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "points" integer, "question_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091109031457')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("answers")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnswers (20091109031457)
+Migrating to CreateQuestions (20091109031629)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109031629')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("answers")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("questions")[0m
+  [4;36;1mAnswer Create (0.3ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:24:18', '2009-11-09 03:24:18', 'Çok iyi bir insan', 3)[0m
+  [4;35;1mAnswer Create (0.3ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:24:18', '2009-11-09 03:24:18', 'Kafa dengi biri', 5)[0m
+  [4;36;1mAnswer Create (0.2ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:24:18', '2009-11-09 03:24:18', 'Her ihtimalin insanı', 10)[0m
+  [4;35;1mQuestion Create (0.3ms)[0m   [0mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:24:18', '2009-11-09 03:24:18', 'Yakınlarınız sizi tarif etmek için aşağıdakilerden hangisini söylerdi?')[0m
+  [4;36;1mAnswer Update (0.2ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:24:18', "question_id" = 1 WHERE "id" = 1[0m
+  [4;35;1mAnswer Update (0.1ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:24:18', "question_id" = 1 WHERE "id" = 2[0m
+  [4;36;1mAnswer Update (0.1ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:24:18', "question_id" = 1 WHERE "id" = 3[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnswers (20091109031457)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "points" integer, "question_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091109031457')[0m
+Migrating to CreateQuestions (20091109031629)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091109031629')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("answers")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("questions")[0m
+  [4;36;1mAnswer Create (0.4ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Çok iyi bir insan', 3)[0m
+  [4;35;1mAnswer Create (0.3ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Kafa dengi biri', 5)[0m
+  [4;36;1mAnswer Create (0.3ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Her ihtimalin insanı', 10)[0m
+  [4;35;1mQuestion Create (0.3ms)[0m   [0mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Yakınlarınız sizi tarif etmek için aşağıdakilerden hangisini söylerdi?')[0m
+  [4;36;1mAnswer Update (0.2ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 1 WHERE "id" = 1[0m
+  [4;35;1mAnswer Update (0.1ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 1 WHERE "id" = 2[0m
+  [4;36;1mAnswer Update (0.1ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 1 WHERE "id" = 3[0m
+  [4;35;1mAnswer Create (0.3ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Önce davranıp sonra düşünürüm', 5)[0m
+  [4;36;1mAnswer Create (0.3ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Önce düşünüp sonra davranırım', 3)[0m
+  [4;35;1mAnswer Create (0.3ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Ne davranırım ne de düşünürüm', 10)[0m
+  [4;36;1mQuestion Create (0.3ms)[0m   [0;1mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Şu şıklardan hangisi daha çok sizi temsil ediyor?')[0m
+  [4;35;1mAnswer Update (0.2ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 2 WHERE "id" = 4[0m
+  [4;36;1mAnswer Update (0.1ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 2 WHERE "id" = 5[0m
+  [4;35;1mAnswer Update (0.1ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 2 WHERE "id" = 6[0m
+  [4;36;1mAnswer Create (0.3ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', '''Tüm sorunlar da beni buluyor kardeşim!'' diye isyan ederim', 10)[0m
+  [4;35;1mAnswer Create (0.3ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Eğer sorunu çözemezsem başıma gelecekleri düşünürüm', 5)[0m
+  [4;36;1mAnswer Create (0.3ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Sorunu çözmek için planlar yapmaya başlarım', 3)[0m
+  [4;35;1mQuestion Create (0.3ms)[0m   [0mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Biraz alengirli ama çözümü mümkün bir sorun karşısında nasıl tepki verirsiniz?')[0m
+  [4;36;1mAnswer Update (0.2ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 3 WHERE "id" = 7[0m
+  [4;35;1mAnswer Update (0.1ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 3 WHERE "id" = 8[0m
+  [4;36;1mAnswer Update (0.1ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 3 WHERE "id" = 9[0m
+  [4;35;1mAnswer Create (0.3ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Üzüntüye boğulsam da durumu kabullenmek için çaba gösteririm', 3)[0m
+  [4;36;1mAnswer Create (0.3ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Beni bu hale düşürenlerden öcümü almak için planlar yapmaya başlarım', 10)[0m
+  [4;35;1mAnswer Create (0.3ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Böyle bir cezayı hakketmiş olmak için ne suç işlemiş olabileceğimi düşünürüm', 5)[0m
+  [4;36;1mQuestion Create (0.3ms)[0m   [0;1mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Değiştirmeye gücünüzün yetmediği (ciddi bir hastalık, kaza gibi) trajik bir durum karşısında nasıl tepki verirsiniz?')[0m
+  [4;35;1mAnswer Update (0.2ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 4 WHERE "id" = 10[0m
+  [4;36;1mAnswer Update (0.2ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 4 WHERE "id" = 11[0m
+  [4;35;1mAnswer Update (0.1ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 4 WHERE "id" = 12[0m
+  [4;36;1mAnswer Create (0.3ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Acaba kim taşınıyor diye merak ederim', 3)[0m
+  [4;35;1mAnswer Create (0.3ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Bu şüpheli durumu polise ihbar ederim', 5)[0m
+  [4;36;1mAnswer Create (0.3ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Polise bile güvenmem. Gidip olaya kendim müdahale ederim.', 10)[0m
+  [4;35;1mQuestion Create (0.3ms)[0m   [0mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Bir nakliyat firmasına ait boş bir kamyonetin, evinizin önünde saatlerce beklediğini görürseniz ne yaparsınız?')[0m
+  [4;36;1mAnswer Update (0.2ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 5 WHERE "id" = 13[0m
+  [4;35;1mAnswer Update (0.2ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 5 WHERE "id" = 14[0m
+  [4;36;1mAnswer Update (0.1ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 5 WHERE "id" = 15[0m
+  [4;35;1mAnswer Create (0.6ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Yasağa uyarsam ne kazanacağımı sorarım', 3)[0m
+  [4;36;1mAnswer Create (0.6ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Bana yasak koymaya kalkanı pişman ederim', 10)[0m
+  [4;35;1mAnswer Create (0.6ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Neden ''neden?'' dememem gerektiğini sorarım', 5)[0m
+  [4;36;1mQuestion Create (0.6ms)[0m   [0;1mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Size birgün boyunca ''neden?'' sorusunu kullanmayı yasaklasalar ilk tepkiniz ne olurdu?')[0m
+  [4;35;1mAnswer Update (0.3ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 6 WHERE "id" = 16[0m
+  [4;36;1mAnswer Update (0.3ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 6 WHERE "id" = 17[0m
+  [4;35;1mAnswer Update (0.3ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 6 WHERE "id" = 18[0m
+  [4;36;1mAnswer Create (0.6ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'İçgüdülerimi seçerim', 5)[0m
+  [4;35;1mAnswer Create (0.6ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Mantığımı seçerim', 3)[0m
+  [4;36;1mAnswer Create (0.6ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Her ikisini de seçmem', 10)[0m
+  [4;35;1mQuestion Create (0.6ms)[0m   [0mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:35:36', '2009-11-09 03:35:36', 'İç güdülerinizle mantığınız ters düşse hangisini seçersiniz?')[0m
+  [4;36;1mAnswer Update (0.3ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 7 WHERE "id" = 19[0m
+  [4;35;1mAnswer Update (0.3ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 7 WHERE "id" = 20[0m
+  [4;36;1mAnswer Update (0.4ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 7 WHERE "id" = 21[0m
+  [4;35;1mAnswer Create (0.6ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Hayli bencil', 10)[0m
+  [4;36;1mAnswer Create (0.6ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Eh, biraz bencil olduğunu söylesek yalan olmaz', 5)[0m
+  [4;35;1mAnswer Create (0.6ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Bencillik ne demek; hayatımda tanıdığım en fedakâr insan o', 3)[0m
+  [4;36;1mQuestion Create (0.6ms)[0m   [0;1mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Yakınlarınıza sizin ne denli bencil olduğunuzu sorsak ne derlerdi?')[0m
+  [4;35;1mAnswer Update (0.4ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 8 WHERE "id" = 22[0m
+  [4;36;1mAnswer Update (0.3ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 8 WHERE "id" = 23[0m
+  [4;35;1mAnswer Update (0.3ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 8 WHERE "id" = 24[0m
+  [4;36;1mAnswer Create (0.9ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Kafama eserse değiştiririm', 5)[0m
+  [4;35;1mAnswer Create (0.6ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Kolay kolay değiştirmem', 3)[0m
+  [4;36;1mAnswer Create (0.6ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Ben karar alana kadar olaylar kendiliğinden değişir', 10)[0m
+  [4;35;1mQuestion Create (0.6ms)[0m   [0mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:35:36', '2009-11-09 03:35:36', 'Aldığınız kararları ne sıklıkta değiştirirsiniz?')[0m
+  [4;36;1mAnswer Update (0.4ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 9 WHERE "id" = 25[0m
+  [4;35;1mAnswer Update (0.3ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 9 WHERE "id" = 26[0m
+  [4;36;1mAnswer Update (0.3ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:36', "question_id" = 9 WHERE "id" = 27[0m
+  [4;35;1mAnswer Create (0.6ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:37', '2009-11-09 03:35:37', 'Çevrenin ne düşündüğüne önem veririm', 3)[0m
+  [4;36;1mAnswer Create (0.6ms)[0m   [0;1mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:37', '2009-11-09 03:35:37', 'Çevrenin ne düşündüğünü iplemem', 5)[0m
+  [4;35;1mAnswer Create (0.6ms)[0m   [0mINSERT INTO "answers" ("question_id", "created_at", "updated_at", "text", "points") VALUES(NULL, '2009-11-09 03:35:37', '2009-11-09 03:35:37', 'Çevre benim ne düşündüğümü önemsesin, diye düşünürüm', 10)[0m
+  [4;36;1mQuestion Create (0.6ms)[0m   [0;1mINSERT INTO "questions" ("created_at", "updated_at", "text") VALUES('2009-11-09 03:35:37', '2009-11-09 03:35:37', 'Çevrenizdekilerin sizin hakkınızdaki düşünceleri sizin için ne denli önemlidir?')[0m
+  [4;35;1mAnswer Update (0.4ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:37', "question_id" = 10 WHERE "id" = 28[0m
+  [4;36;1mAnswer Update (0.3ms)[0m   [0;1mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:37', "question_id" = 10 WHERE "id" = 29[0m
+  [4;35;1mAnswer Update (0.3ms)[0m   [0mUPDATE "answers" SET "updated_at" = '2009-11-09 03:35:37', "question_id" = 10 WHERE "id" = 30[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "questions" [0m
+  [4;35;1mQuestion Load (0.7ms)[0m   [0mSELECT * FROM "questions" LIMIT 1[0m
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" LIMIT 1[0m
+  [4;35;1mAnswer Load (1.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
