@@ -1,0 +1,19 @@
+
+<% form_for @test_result do |f| -%>
+<ol>
+  <% Question.all.each do |question| -%>
+  <li>
+    <%= question.text %>
+    <ol>
+      <% question.answers.sort_by { rand }.each do |answer| -%>
+      <li>
+        <%= radio_button_tag "answers[#{question.id}]", answer.id %>
+        <%= answer.text %>
+      </li>
+      <% end -%>
+    </ol>
+  </li>
+  <% end -%>
+</ol>
+<%= f.submit "Sonocumu göster" %>
+<% end -%>

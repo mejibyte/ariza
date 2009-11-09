@@ -154,3 +154,172 @@ Migrating to CreateQuestions (20091109031629)
   [4;35;1mQuestion Load (0.7ms)[0m   [0mSELECT * FROM "questions" LIMIT 1[0m
   [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" LIMIT 1[0m
   [4;35;1mAnswer Load (1.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 22:41:43) [GET]
+  Parameters: {"fb_sig_app_id"=>"189458659746", "fb_sig_iframe_key"=>"fad6f4e614a212e80c67249a666d2b09", "fb_sig_in_iframe"=>"1", "fb_sig_locale"=>"en_US", "fb_sig_in_new_facebook"=>"1", "fb_sig"=>"f9fb05e2b8c67100295670f79f780745", "fb_sig_added"=>"0", "fb_sig_api_key"=>"47b1e887dce7b235e173024193d326f4", "fb_sig_time"=>"1257738086.8507"}
+Rendering test_results/new
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/?fb_sig_in_iframe=1&fb_sig_iframe_key=fad6f4e614a212e80c67249a666d2b09&fb_sig_locale=en_US&fb_sig_in_new_facebook=1&fb_sig_time=1257738086.8507&fb_sig_added=0&fb_sig_api_key=47b1e887dce7b235e173024193d326f4&fb_sig_app_id=189458659746&fb_sig=f9fb05e2b8c67100295670f79f780745]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnswers (20091109031457)
+Migrating to CreateQuestions (20091109031629)
+Migrating to CreateTestResults (20091109034415)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "test_results" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "answers_test_results" ("answer_id" integer, "test_result_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091109034415')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("answers")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("answers_test_results")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("questions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("test_results")[0m
+  [4;36;1mAnswer Load (1.4ms)[0m   [0;1mSELECT * FROM "answers" LIMIT 1[0m
+  [4;35;1mAnswer Load (0.8ms)[0m   [0mSELECT * FROM "answers" LIMIT 1[0m
+  [4;36;1mTestResult Load (0.8ms)[0m   [0;1mSELECT * FROM "test_results" INNER JOIN "answers_test_results" ON "test_results".id = "answers_test_results".test_result_id WHERE ("answers_test_results".answer_id = 1 ) [0m
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 22:49:21) [GET]
+  Parameters: {"fb_sig_app_id"=>"189458659746", "fb_sig_iframe_key"=>"fad6f4e614a212e80c67249a666d2b09", "fb_sig_in_iframe"=>"1", "fb_sig_locale"=>"en_US", "fb_sig_in_new_facebook"=>"1", "fb_sig"=>"202da6d8519881e0ef67703874665857", "fb_sig_added"=>"0", "fb_sig_api_key"=>"47b1e887dce7b235e173024193d326f4", "fb_sig_time"=>"1257738531.9536"}
+Rendering test_results/new
+
+ActionView::TemplateError (undefined method `test_results_path' for #<ActionView::Base:0xb6977adc>) on line #2 of app/views/test_results/new.html.erb:
+1: 
+2: <% form_for @test_result do |f| -%>
+3: <% Question.all.each do |question| -%>
+4: <% end -%>
+5: <%= f.submit %>
+
+    app/views/test_results/new.html.erb:2
+
+Rendered rescues/_trace (54.2ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 22:49:23) [GET]
+Rendering test_results/new
+
+ActionView::TemplateError (undefined method `test_results_path' for #<ActionView::Base:0xb6805000>) on line #2 of app/views/test_results/new.html.erb:
+1: 
+2: <% form_for @test_result do |f| -%>
+3: <% Question.all.each do |question| -%>
+4: <% end -%>
+5: <%= f.submit %>
+
+    app/views/test_results/new.html.erb:2
+
+Rendered rescues/_trace (135.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 22:49:39) [GET]
+Rendering test_results/new
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" [0m
+Completed in 33ms (View: 23, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 22:50:37) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" [0m
+Completed in 25ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 22:50:53) [GET]
+Rendering test_results/new
+  [4;36;1mQuestion Load (2.4ms)[0m   [0;1mSELECT * FROM "questions" [0m
+Completed in 67ms (View: 46, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 22:53:43) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (1.2ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.8ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 120ms (View: 95, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 22:54:01) [GET]
+Rendering test_results/new
+  [4;36;1mQuestion Load (1.1ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 78ms (View: 52, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 22:54:23) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (1.1ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 62ms (View: 36, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 22:55:19) [GET]
+Rendering test_results/new
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 55ms (View: 41, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#create (for 127.0.0.1 at 2009-11-08 22:56:01) [POST]
+  Parameters: {"commit"=>"Sonocumu göster", "authenticity_token"=>"gjpIj774lBK/KBdTYftU6zUXHZSG4OFet9zN79drun8=", "answers"=>{"6"=>"16", "7"=>"19", "1"=>"1", "2"=>"5", "3"=>"8"}}
+
+ActionController::UnknownAction (No action responded to create. Actions: new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TestResultsController#create (for 127.0.0.1 at 2009-11-08 22:56:24) [POST]
+  Parameters: {"commit"=>"Sonocumu göster", "authenticity_token"=>"gjpIj774lBK/KBdTYftU6zUXHZSG4OFet9zN79drun8=", "answers"=>{"6"=>"16", "7"=>"19", "1"=>"1", "2"=>"5", "3"=>"8"}}
+
+ActionView::MissingTemplate (Missing template test_results/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
