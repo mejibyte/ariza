@@ -1,7 +1,7 @@
 
 <% form_for @test_result do |f| -%>
 <ol>
-  <% Question.all.each do |question| -%>
+  <% @questions.each do |question| -%>
   <li>
     <%= question.text %>
     <ol>

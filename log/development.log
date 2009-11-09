@@ -323,3 +323,328 @@ ActionView::MissingTemplate (Missing template test_results/create.erb in view pa
   
 
 Rendering rescues/layout (internal_server_error)
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:09:35) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (1.2ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 85ms (View: 50, DB: 8) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:10:21) [GET]
+  Parameters: {"fb_sig_app_id"=>"189458659746", "fb_sig_iframe_key"=>"fad6f4e614a212e80c67249a666d2b09", "fb_sig_in_iframe"=>"1", "fb_sig_locale"=>"en_US", "fb_sig_in_new_facebook"=>"1", "fb_sig"=>"1bcdf9f7faa9218a831bab9402d1da73", "fb_sig_added"=>"0", "fb_sig_api_key"=>"47b1e887dce7b235e173024193d326f4", "fb_sig_time"=>"1257739784.9312"}
+Rendering test_results/new
+  [4;36;1mQuestion Load (1.2ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 75ms (View: 49, DB: 8) | 200 OK [http://localhost/?fb_sig_in_iframe=1&fb_sig_iframe_key=fad6f4e614a212e80c67249a666d2b09&fb_sig_locale=en_US&fb_sig_in_new_facebook=1&fb_sig_time=1257739784.9312&fb_sig_added=0&fb_sig_api_key=47b1e887dce7b235e173024193d326f4&fb_sig_app_id=189458659746&fb_sig=1bcdf9f7faa9218a831bab9402d1da73]
+
+
+Processing TestResultsController#create (for 127.0.0.1 at 2009-11-08 23:11:26) [POST]
+  Parameters: {"commit"=>"Sonocumu göster", "authenticity_token"=>"gjpIj774lBK/KBdTYftU6zUXHZSG4OFet9zN79drun8=", "answers"=>{"9"=>"27", "1"=>"3", "2"=>"6", "3"=>"9", "10"=>"28"}}
+
+ActionView::MissingTemplate (Missing template test_results/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:07) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (2.5ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 91ms (View: 62, DB: 8) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:09) [GET]
+Rendering test_results/new
+  [4;36;1mQuestion Load (1.1ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 136ms (View: 111, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:10) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 70ms (View: 41, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:10) [GET]
+Rendering test_results/new
+  [4;36;1mQuestion Load (2.4ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (1.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (1.4ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (3.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mAnswer Load (1.4ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;35;1mAnswer Load (1.4ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 122ms (View: 84, DB: 15) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:11) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (1.1ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 66ms (View: 38, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:12) [GET]
+Rendering test_results/new
+  [4;36;1mQuestion Load (1.1ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 64ms (View: 35, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:12) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.8ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.8ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 158ms (View: 129, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:13) [GET]
+Rendering test_results/new
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 61ms (View: 40, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:14) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (2.6ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 72ms (View: 43, DB: 8) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:15) [GET]
+Rendering test_results/new
+  [4;36;1mQuestion Load (2.4ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 89ms (View: 60, DB: 8) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:15) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (2.4ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (1.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 183ms (View: 155, DB: 9) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:16) [GET]
+Rendering test_results/new
+  [4;36;1mQuestion Load (2.4ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (1.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 94ms (View: 63, DB: 9) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:17) [GET]
+Rendering test_results/new
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.8ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 65ms (View: 41, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:13:20) [GET]
+  Parameters: {"fb_sig_app_id"=>"189458659746", "fb_sig_iframe_key"=>"fad6f4e614a212e80c67249a666d2b09", "fb_sig_in_iframe"=>"1", "fb_sig_locale"=>"en_US", "fb_sig_in_new_facebook"=>"1", "fb_sig"=>"203875f23ae87797670cee7eb4df75e4", "fb_sig_added"=>"0", "fb_sig_api_key"=>"47b1e887dce7b235e173024193d326f4", "fb_sig_time"=>"1257739984.9575"}
+Rendering test_results/new
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;36;1mAnswer Load (0.7ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 61ms (View: 39, DB: 7) | 200 OK [http://localhost/?fb_sig_in_iframe=1&fb_sig_iframe_key=fad6f4e614a212e80c67249a666d2b09&fb_sig_locale=en_US&fb_sig_in_new_facebook=1&fb_sig_time=1257739984.9575&fb_sig_added=0&fb_sig_api_key=47b1e887dce7b235e173024193d326f4&fb_sig_app_id=189458659746&fb_sig=203875f23ae87797670cee7eb4df75e4]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:14:02) [GET]
+  [4;35;1mQuestion Load (4.8ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (3.3ms)[0m   [0;1mSELECT "answers".* FROM "answers" WHERE ("answers".question_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+Rendering test_results/new
+Completed in 79ms (View: 20, DB: 8) | 200 OK [http://localhost/]
+
+
+Processing TestResultsController#create (for 127.0.0.1 at 2009-11-08 23:14:12) [POST]
+  Parameters: {"commit"=>"Sonocumu göster", "authenticity_token"=>"gjpIj774lBK/KBdTYftU6zUXHZSG4OFet9zN79drun8=", "answers"=>{"1"=>"1", "2"=>"5", "10"=>"28"}}
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers"."id" IN (1,5,28)) [0m
+  [4;36;1mQuestion Load (1.1ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+Completed in 130ms (View: 2, DB: 3) | 200 OK [http://localhost/test_results]
+
+
+Processing TestResultsController#create (for 127.0.0.1 at 2009-11-08 23:14:29) [POST]
+  Parameters: {"commit"=>"Sonocumu göster", "authenticity_token"=>"gjpIj774lBK/KBdTYftU6zUXHZSG4OFet9zN79drun8=", "answers"=>{"6"=>"16", "7"=>"20", "8"=>"24", "9"=>"25", "1"=>"3", "2"=>"5", "3"=>"8", "10"=>"28", "4"=>"12", "5"=>"14"}}
+  [4;36;1mAnswer Load (1.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers"."id" IN (16,20,24,25,3,5,8,12,28,14)) [0m
+  [4;35;1mQuestion Load (1.2ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 68ms (View: 1, DB: 8) | 200 OK [http://localhost/test_results]
+
+
+Processing TestResultsController#create (for 127.0.0.1 at 2009-11-08 23:14:35) [POST]
+  Parameters: {"commit"=>"Sonocumu göster", "authenticity_token"=>"gjpIj774lBK/KBdTYftU6zUXHZSG4OFet9zN79drun8=", "answers"=>{"6"=>"18", "7"=>"20", "8"=>"24", "9"=>"25", "1"=>"3", "2"=>"5", "3"=>"8", "10"=>"28", "4"=>"12", "5"=>"14"}}
+  [4;36;1mAnswer Load (1.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers"."id" IN (18,20,24,25,3,5,8,12,28,14)) [0m
+  [4;35;1mQuestion Load (1.1ms)[0m   [0mSELECT * FROM "questions" [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+Completed in 93ms (View: 1, DB: 8) | 200 OK [http://localhost/test_results]
+
+
+Processing TestResultsController#new (for 127.0.0.1 at 2009-11-08 23:14:39) [GET]
+  [4;36;1mQuestion Load (2.5ms)[0m   [0;1mSELECT * FROM "questions" [0m
+  [4;35;1mAnswer Load (3.3ms)[0m   [0mSELECT "answers".* FROM "answers" WHERE ("answers".question_id IN (1,2,3,4,5,6,7,8,9,10)) [0m
+Rendering test_results/new
+Completed in 66ms (View: 15, DB: 6) | 200 OK [http://localhost/]
