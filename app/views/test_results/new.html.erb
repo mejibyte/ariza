@@ -7,7 +7,7 @@
     <ol>
       <% question.answers.sort_by { rand }.each do |answer| -%>
       <li>
-        <%= radio_button_tag "answers[#{question.id}]", answer.id %>
+        <%= radio_button_tag "answers[#{question.id}]", answer.id, @test_result.answer_ids.include?(answer.id) %>
         <%= answer.text %>
       </li>
       <% end -%>
