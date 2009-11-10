@@ -1,0 +1,14 @@
+<div id="content">
+  <%= @test_result.text %>
+</div>
+
+<div id="footer">
+  <div>
+    Bu test Sinem Ersever'in 'ARIZA' adlı kitabından alınmıştır. Kitapla ilgili daha fazla bilgi için veya Facebook'ta aramıza katılmak için <%= link_to "burayı tıkla...", "http://www.facebook.com/group.php?gid=125169219846", :target => "_new" %>
+  </div>
+
+  <div>
+    Bu testi arkadaşlarınla paylaşmak için <%= link_to "burayı tıkla...", new_invitation_path %>
+  </div>
+
+</div>

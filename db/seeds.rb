@@ -23,7 +23,7 @@ q.save!
 # Question 3
 q  = Question.new(:text => "Biraz alengirli ama çözümü mümkün bir sorun karşısında nasıl tepki verirsiniz?")
 
-a = Answer.create(:text => "'Tüm sorunlar da beni buluyor kardeşim!' diye isyan ederim", :points => 10)
+a = Answer.create(:text => "<span class='italic'>'Tüm sorunlar da beni buluyor kardeşim!'</span> diye isyan ederim", :points => 10)
 b = Answer.create(:text => "Eğer sorunu çözemezsem başıma gelecekleri düşünürüm", :points => 5)
 c = Answer.create(:text => "Sorunu çözmek için planlar yapmaya başlarım", :points => 3)
 
@@ -51,11 +51,11 @@ q.answers = [a, b, c]
 q.save!
 
 # Question 6
-q  = Question.new(:text => "Size birgün boyunca \'neden?\' sorusunu kullanmayı yasaklasalar ilk tepkiniz ne olurdu?")
+q  = Question.new(:text => "Size birgün boyunca <span class='italic'>'neden?'</span> sorusunu kullanmayı yasaklasalar ilk tepkiniz ne olurdu?")
 
 a = Answer.create(:text => "Yasağa uyarsam ne kazanacağımı sorarım", :points => 3)
 b = Answer.create(:text => "Bana yasak koymaya kalkanı pişman ederim", :points => 10)
-c = Answer.create(:text => "Neden 'neden?' dememem gerektiğini sorarım", :points => 5)
+c = Answer.create(:text => "Neden <span class='italic'>'neden?'</span> dememem gerektiğini sorarım", :points => 5)
 
 q.answers = [a, b, c]
 q.save!

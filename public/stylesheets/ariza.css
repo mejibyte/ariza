@@ -1,0 +1,36 @@
+.clear {
+  clear: both;
+}
+
+#header #cover {
+  float: left;
+}
+
+#header .text {
+  float: right;
+  width: 600px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+ol.answers {
+  list-style-type: lower-alpha;
+}
+
+ol.questions li{
+  padding: 10px;
+}
+
+ol.answers li {
+  padding: 2px;
+}
+
+.formError {
+  background-color: #FCC;
+  border: solid 1px #C66;
+  padding: 5px;
+}
+
+
