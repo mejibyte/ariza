@@ -41,4 +41,5 @@ ol.answers li {
 .question {
   border: solid 1px #CCCCCC;
   padding: 5px;
+  margin-bottom: 5px;
 }
