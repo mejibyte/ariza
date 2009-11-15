@@ -2,18 +2,19 @@
   clear: both;
 }
 
-#header #cover {
+.italic {
+  font-style: italic;
+}
+
+#header #cover, #footer #cover {
   float: left;
 }
 
-#header .text {
+#header .text, #footer .text {
   float: right;
   width: 600px;
 }
 
-.italic {
-  font-style: italic;
-}
 
 ol.answers {
   list-style-type: lower-alpha;
@@ -33,4 +34,6 @@ ol.answers li {
   padding: 5px;
 }
 
-
+#footer {
+  margin-top: 20px;
+}

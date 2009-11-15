@@ -1,14 +1,21 @@
 <div id="content">
-  <%= @test_result.text %>
+  <h1><%= @test_result.title %></h1>
+  <div>
+    <%= @test_result.text %>
+  </div>
 </div>
 
 <div id="footer">
-  <div>
-    Bu test Sinem Ersever'in 'ARIZA' adlı kitabından alınmıştır. Kitapla ilgili daha fazla bilgi için veya Facebook'ta aramıza katılmak için <%= link_to "burayı tıkla...", "http://www.facebook.com/group.php?gid=125169219846", :target => "_new" %>
+  <div id="cover">
+    <%= image_tag "book_cover_small.jpg" %>
   </div>
-
-  <div>
-    Bu testi arkadaşlarınla paylaşmak için <%= link_to "burayı tıkla...", new_invitation_path %>
+  <div class="text">
+    <div>
+      Bu test Sinem Ersever'in 'ARIZA' adlı kitabından alınmıştır. Kitapla ilgili daha fazla bilgi için veya Facebook'ta aramıza katılmak için <%= link_to "burayı tıkla...", "http://www.facebook.com/group.php?gid=125169219846", :target => "_new" %>
+    </div>
+    <br />
+    <div>
+      Bu testi arkadaşlarınla paylaşmak için <%= link_to "burayı tıkla...", new_invitation_path %>
+    </div>
   </div>
-
 </div>

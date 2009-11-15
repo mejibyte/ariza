@@ -1,6 +1,6 @@
 class TestResultsController < ApplicationController
   before_filter :load_questions
-  ensure_application_is_installed_by_facebook_user :only => :new
+  # ensure_application_is_installed_by_facebook_user :only => :new
 
   def new
     @test_result = TestResult.new
