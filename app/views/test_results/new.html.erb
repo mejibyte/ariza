@@ -16,19 +16,22 @@
 
   <% form_for @test_result do |f| -%>
   <ol class="questions">
-    <% @questions.each do |question| -%>
-    <li>
-      <%= question.text %>
-      <ol class="answers">
-        <% question.answers.sort_by { rand }.each do |answer| -%>
-        <li>
-          <%= radio_button_tag "answers[#{question.id}]", answer.id, @test_result.answer_ids.include?(answer.id) %>
-          <%= label_tag "answers_#{question.id}_#{answer.id}", answer.text %>
-        </li>
-        <% end -%>
-      </ol>
-    </li>
-    <% end -%>
+    <div class="question">
+      <% @questions.each do |question| -%>
+      <li>
+        <%= question.text %>
+        <ol class="answers">
+          <% question.answers.sort_by { rand }.each do |answer| -%>
+          <li>
+            <%= radio_button_tag "answers[#{question.id}]", answer.id, @test_result.answer_ids.include?(answer.id) %>
+            <%= label_tag "answers_#{question.id}_#{answer.id}", answer.text %>
+          </li>
+          <% end -%>
+
+        </ol>
+      </li>
+      <% end -%>
+    </div>
   </ol>
   <%= f.submit "Sonucumu göster" %>
   <% end -%>

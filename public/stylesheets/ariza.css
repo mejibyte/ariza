@@ -37,3 +37,8 @@ ol.answers li {
 #footer {
   margin-top: 20px;
 }
+
+.question {
+  border: solid 1px #CCCCCC;
+  padding: 5px;
+}
