@@ -1,3 +1,4 @@
+RAILS_ENV = 'production' unless defined? RAILS_ENV
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
