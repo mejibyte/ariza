@@ -8,4 +8,5 @@ FB_RequireFeatures(["Api", "Connect", "XFBML"], function(){
 
 $(function(){
     window.scroll(0, 0);
+    top.scroll(0, 0);
 });
