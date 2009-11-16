@@ -5,3 +5,7 @@ FB_RequireFeatures(["Api", "Connect", "XFBML"], function(){
     FB.Facebook.init(api_key, channel_path);
     FB.CanvasClient.startTimerToSizeToContent();
 });
+
+$(function(){
+    window.scroll(0, 0);
+});
