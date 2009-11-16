@@ -1,6 +1,7 @@
 class TestResultsController < ApplicationController
   before_filter :load_questions
-  # ensure_application_is_installed_by_facebook_user :only => :new
+  ensure_authenticated_to_facebook :only => :new
+  ensure_application_is_installed_by_facebook_user :only => :new
 
   def new
     @test_result = TestResult.new
@@ -12,7 +13,6 @@ class TestResultsController < ApplicationController
     if @test_result.valid?
       render :action => "show"
     else
-      flash[:error] = "Please answer all questions"
       render :action => "new"
     end
   end
