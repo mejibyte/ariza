@@ -38,7 +38,7 @@ ol.answers li {
   margin-top: 20px;
 }
 
-.questions li {
+.questions .question {
   border: solid 1px #CCCCCC;
   padding: 5px;
   margin-bottom: 5px;
