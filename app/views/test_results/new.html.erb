@@ -17,7 +17,7 @@
   <% form_for @test_result do |f| -%>
   <ol class="questions">
     <% @questions.each do |question| -%>
-      <li class="question <%= 'error' unless @test_result.has_answer_for_question?(question) %>">
+      <li class="question <%= 'error' if @test_results.errors[:answers] && !@test_result.has_answer_for_question?(question) %>">
         <%= question.text %>
         <ol class="answers">
           <% question.answers.sort_by { rand }.each do |answer| -%>

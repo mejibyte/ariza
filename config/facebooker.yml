@@ -36,10 +36,11 @@ test:
     server_alive_interval: 0
 
 production:
-  api_key:
-  secret_key:
-  canvas_page_name:
-  callback_url:
+  api_key: 47b1e887dce7b235e173024193d326f4
+  secret_key: 9939514a11d734e99dfc1b85a876a5c4
+  canvas_page_name: ariza_testi
+  callback_url: http://localhost:3000/
+  pretty_errors: true
   set_asset_host_to_callback_url: true
   tunnel:
     public_host_username:
