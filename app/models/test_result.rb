@@ -30,6 +30,10 @@ class TestResult < ActiveRecord::Base
     end
   end
 
+  def has_answer_for_question?(question)
+    (answers & question.answers).size > 0
+  end
+
   protected
 
   def has_exactly_one_answer_for_each_question?
@@ -37,10 +41,6 @@ class TestResult < ActiveRecord::Base
       return false if (answers & question.answers).size != 1
     end
     return true
-  end
-
-  def has_answer_for_question?(question)
-    (answers & question.answers).size > 0
   end
 
   def must_have_exactly_one_answer_for_each_question
