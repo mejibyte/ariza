@@ -41,7 +41,8 @@ class TestResult < ActiveRecord::Base
 
   def must_have_exactly_one_answer_for_each_question
     unless has_exactly_one_answer_for_each_question?
-      errors.add(:answers, "Please select exactly one answer for each question")
+      # errors.add(:answers, "Please select exactly one answer for each question")
+      errors.add(:answers, "Lütfen her soruyu cevaplayın.")
     end
   end
 end
