@@ -47,3 +47,13 @@ ol.answers li {
   padding: 5px;
   margin-bottom: 5px;
 }
+
+.input{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d9dfea #0e1f5b #0e1f5b #d9dfea;
+  background-color: #3b5998;
+  color: #fff;
+  padding: 2px 15px 3px 15px;
+  text-align: center;
+}
