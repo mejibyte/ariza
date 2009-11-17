@@ -39,6 +39,10 @@ class TestResult < ActiveRecord::Base
     return true
   end
 
+  def has_answer_for_question?(question)
+    (answers & question.answers).size > 0
+  end
+
   def must_have_exactly_one_answer_for_each_question
     unless has_exactly_one_answer_for_each_question?
       # errors.add(:answers, "Please select exactly one answer for each question")
