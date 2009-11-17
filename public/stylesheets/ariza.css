@@ -38,6 +38,10 @@ ol.answers li {
   padding: 5px;
 }
 
+.error {
+  background-color: #FCC;
+}
+
 #footer {
   margin-top: 20px;
 }
