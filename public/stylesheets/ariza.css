@@ -69,3 +69,8 @@ input{
   padding: 2px 15px 3px 15px;
   text-align: center;
 }
+
+.ie_hack{
+  height: 1px;
+  margin-bottom: 20px;
+}
