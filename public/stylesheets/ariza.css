@@ -70,7 +70,7 @@ input{
   text-align: center;
 }
 
-.ie_hack{
+#ie_hack{
   height: 1px;
   margin-bottom: 20px;
 }
