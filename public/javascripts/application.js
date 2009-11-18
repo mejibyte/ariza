@@ -7,6 +7,7 @@ FB_RequireFeatures(["Api", "Connect", "XFBML", "CanvasUtil"], function(){
     FB.CanvasClient.startTimerToSizeToContent();
     FB.CanvasClient.scrollTo(0, 0);
     var uid = FB.Facebook.apiClient.get_session().uid;
+    alert(uid);
     $(function(){
         $("#test_result_uid").val(uid);
     });
