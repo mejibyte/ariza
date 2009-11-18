@@ -8,7 +8,11 @@ body {
 }
 
 .italic {
-  font-style: italic;
+  /* font-style: italic; */
+}
+
+.bold {
+  font-weight: bold;
 }
 
 #header #cover, #footer #cover {
