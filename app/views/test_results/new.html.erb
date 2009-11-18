@@ -15,7 +15,7 @@
   <%= error_message_on :test_result, :answers %>
 
   <% form_for @test_result do |f| -%>
-  <%= hidden_field_tag "test_result[uid]", "" %>
+  <%= f.hidden_field :uid %>
   <ol class="questions">
     <% @questions.each do |question| -%>
     <li class="question <%= 'error' if @test_result.errors[:answers] && !@test_result.has_answer_for_question?(question) %>">
