@@ -15,7 +15,6 @@
   <%= error_message_on :test_result, :answers %>
 
   <% form_for @test_result do |f| -%>
-  <%= f.hidden_field :uid, facebook_session.user.uid %>
   <ol class="questions">
     <% @questions.each do |question| -%>
     <li class="question <%= 'error' if @test_result.errors[:answers] && !@test_result.has_answer_for_question?(question) %>">

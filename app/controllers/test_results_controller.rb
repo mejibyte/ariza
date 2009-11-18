@@ -8,7 +8,7 @@ class TestResultsController < ApplicationController
   end
 
   def create
-    @test_result = TestResult.new(params[:test_result])
+    @test_result = TestResult.new
     @test_result.answer_ids = (params[:answers] || {}).collect { |k, v| v }
     if @test_result.valid?
       render :action => "show"
